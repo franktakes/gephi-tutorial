@@ -2,14 +2,14 @@
 Last updated Summer 2024 for Gephi version 0.10.1
 
 ## About this tutorial
-This tutorial provides an introduction to [Gephi]{https://gephi.org}, an open source tool for visualizing graphs, also referred to as (social) networks.
-It was originally written as part of the week 1 lab session of the [Social Network Analysis for Computer Scientists](https://liacs.leidenuniv.nl/~takesfw/SNACS/) course in the MSc Computer Science programme of Leiden University, but should be reusable for any data-savvy researcher or practitioner. 
+This tutorial provides an introduction to [Gephi](https://gephi.org), an open source tool for visualizing graphs, also referred to as (social) networks.
+It was originally written as part of the week 1 lab session of the [Social Network Analysis for Computer Scientists](https://liacs.leidenuniv.nl/~takesfw/SNACS/) course in the MSc Computer Science programme of Leiden University. 
+While intended as a companion for an introductory network science course, the tutorial is by now likely useful for any data-savvy researcher or practitioner. 
 All credit for the Gephi tool itself goes to the original authors.
 
 ### Prior knowledge 
-On the data side, the tutorial assumes familiarity with CSV files and their manipulation. 
-Conceptually, it is assumed that at least some exposure to common network science / network analysis concepts such as graph/network, nodes, edges, degree, centrality and community structure has been attained. 
-For example, after 
+The tutorial assumes familiarity with CSV files and their manipulation; it is, comparatively, rather data-centered. 
+Conceptually, it is assumed that at least some exposure to common network analysis concepts such as nodes, edges, degree, centrality and community structure has taken place. 
 Still, without understanding these concepts in detail, it should be possible to follow the tutorial.
 
 ### Referencing
@@ -18,8 +18,9 @@ Do you want to reference this tutorial? Please use the following format:
 
 ## Part 0: Installation
 
-Download
-
+Download Gephi 0.10.1 from the original website: https://gephi.org.
+Install Gephi on your Windows, Linux or MacOS device. 
+After installation, start Gephi and close the .
 
 ## Part 1: What do we see?
 
