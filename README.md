@@ -21,6 +21,7 @@ Do you want to reference this tutorial? Please use the following format:
 * [Download Gephi](https://gephi.org/users/download) 0.10.1 from the Gephi website.
 * Install Gephi on your Windows, Linux or MacOS device. 
 * After installation, start Gephi and close the Welcome window that pops up.
+* Use a [mouse](https://en.wikipedia.org/wiki/Computer_mouse) to more easily control the tool.
 
 ## Part 1: What do we see?
 
