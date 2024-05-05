@@ -10,7 +10,7 @@ While intended as a companion for an introductory network science lecture, the t
 ### Prior knowledge 
 The tutorial assumes familiarity with CSV files and their manipulation; it is, comparatively, rather data-centered. 
 Conceptually, it is assumed that at least some exposure to common network analysis concepts such as nodes, edges, degree, centrality and community structure has taken place. 
-Still, without understanding these concepts in detail, it should be possible to follow the tutorial.
+Still, without understanding these concepts in detail, it should be possible to follow the tutorial and enjoy the beauty of networks and their visualizations.
 
 ### Referencing
 Do you want to reference this tutorial? Please use the following format:
