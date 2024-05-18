@@ -4,7 +4,7 @@ Last updated Summer 2024 for Gephi version 0.10.1
 ## About this tutorial
 This tutorial provides an introduction to [Gephi](https://gephi.org), an open source tool for visualizing graphs / networks.
 It is commonly used for data analysis and research in, e.g., (social) network analysis, network science and data science. 
-The tutorial was originally written as part of the first week lab session of the [Social Network Analysis for Computer Scientists](https://liacs.leidenuniv.nl/~takesfw/SNACS/) 6 ECTS semester course in the [MSc Computer Science](https://www.universiteitleiden.nl/en/education/study-programmes/master/computer-science) programme of [Leiden University](https://www.universiteitleiden.nl/en). 
+The tutorial was originally written as part of the first week lab session of the [Social Network Analysis for Computer Scientists](https://liacs.leidenuniv.nl/~takesfw/SNACS/) semester course of 6 ECTS in the [MSc Computer Science](https://www.universiteitleiden.nl/en/education/study-programmes/master/computer-science) programme of [Leiden University](https://www.universiteitleiden.nl/en). 
 While intended as a companion for an introductory network science lecture, the tutorial is by now likely useful for any data-savvy researcher or practitioner. All credit for the Gephi tool itself goes to the original authors.
 
 ### Prior knowledge 
