@@ -16,7 +16,12 @@ Still, without understanding these concepts in detail, it should be possible to 
 
 ### Referencing
 Do you want to reference this tutorial? Please use the following format:
-* F.W. Takes, Gephi Tutorial for Graph/Network Visualization [online], https://github.com/franktakes/gephi-tutorial, 2024. 
+* Frank W. Takes, Gephi Tutorial for Graph/Network Visualization [online], https://github.com/franktakes/gephi-tutorial, 2024.
+
+### Index
+* [Part 0: Installation](#part-0-installation)
+* [Part 1: What do we see?](#part-1-what-do-we-see)
+* [Part 2: A first visualization of a network](#part-2-a-first-visualization-of-a-network)
 
 ## Part 0: Installation
 
@@ -40,11 +45,11 @@ _Figure: Gephi, with the three main Gephi screens highlighted._
 For now, we start in the "Overview" screen, which should have several subwindows: "Appearance" and "Layout" on the left, "Graph" in the middle and "Context", "Filters" and "Statistics" on the right. 
 On some installations these subwindows might not all be visible; you can use the "Window" menu option on top to make these particular subwindows visible for you, and if necessary drag them to the right location. 
 
-**Task**: Install Gephi on your machine.
+**Task**: Install Gephi on your machine and make sure you see the correct subwindows in the "Overview" tab.
 
-## Part 2: Visualizing a network
+## Part 2: A first visualization of a network 
 
-In this part of the tutorial, we will make a first network visualization. Make sure that you are in the "Overview" tab.
+In this part of the tutorial, we will make a first network visualization.
 
 ### Part 2.1: Loading (random) data and saving a project
 
@@ -93,6 +98,14 @@ It is worth noting that a total of 2 x 4 x 3 = 24 visual aspects can be changed.
 _Figure: Visualization of a random directed graph with 50 nodes_
 
 The label of a node (or edge) is a particular characteristic human readable description of the node (or edge). Its display can be enabled using the "Show Node Labels" button (button G in the figure below) in the set of icons at the bottom of the Graph subwindow. 
+One or more of the data attributes of the nodes are then shown as textual label; button Q allows one to set which attributes this pertains By default, the "Label" node attribute is used, which in case of the random graph is the ID of the node.
+
+![Gephi-bottom-buttons](https://github.com/franktakes/gephi-tutorial/blob/main/gephi-graph-bottom-buttons-annotated.png?raw=true)
+_Figure: Buttons at the bottom of the Graph pane_
+
+Icon A resets the viewport such that the entire network is visible; buttons B-D reset certain visual properties. 
+
+**Task**: Play around with the various buttons A-P and observe what happens to the visualization. 
 
 ![Gephi-bottom-buttons](https://github.com/franktakes/gephi-tutorial/blob/main/gephi-graph-bottom-buttons-annotated.png?raw=true)
 _Figure: Buttons at the bottom of the Graph pane_
