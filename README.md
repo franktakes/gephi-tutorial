@@ -111,21 +111,23 @@ _Figure: The "Appearance" subwindow to change node and edge (label) color and si
 Your visualization may look something like the figure below.
 (For now, ignore the "Partition" tab; it will be discussed in [Part 4: A real-world network visualization](#part-4-a-second-real-world-network-visualization).)
 
+**Task**: Node size is proportional to the size of the Layout space; experimentally confirm how a larger value for the "Scaling" parameter of the "ForceAtalas 2" algorithm will require a larger minimal and maximal value for node size. Play with different node color schemes (through the icon to the right of the colored bar in the "Ranking" tab).
+
 ![Gephi-visualization](https://github.com/franktakes/gephi-tutorial/blob/main/gephi-visualization.png?raw=true)
 
 _Figure: Stylized visualization of a random directed graph with 50 nodes_
 
 ### Part 2.4: Labels
 
-The label of a node (or edge) is a readable description of the node (or edge); typically more meaningful than the numeric ID. 
-Its visibility can be enabled using the "Show Node Labels" button in the set of icons at the bottom of the Graph subwindow (button G in the figure below).
+The label of a node (or edge) is a readable description of the node (or edge). In a social network it can be someone's real name, rather than numeric ID.
+Label visibility can be enabled using the "Show Node Labels" button in the set of icons at the bottom of the Graph subwindow (button G in the figure below).
 One or more of the data attributes of the nodes are then shown as textual label; button Q allows one to set which attributes this pertains. 
 By default, the "Label" node attribute is used, which in case of the random graph is the ID of the node.
 
 ![Gephi-bottom-buttons](https://github.com/franktakes/gephi-tutorial/blob/main/gephi-graph-bottom-buttons-annotated.png?raw=true)
 _Figure: Buttons at the bottom of the Graph pane_
 
-Icon A resets the viewport such that the entire network is visible; buttons B-D reset certain visual properties. 
+Icon A resets the viewport such that the entire network is visible; buttons B-D reset certain visual properties. Label G through Q adjust various meaningful aspects of the labels, such as their size, font and color, as well as provide the opportunity to adjust properties and visibility of the edges. 
 
 **Task**: Enable node labels, and play around with the various buttons A-P and observe what happens to the visualization. 
 
