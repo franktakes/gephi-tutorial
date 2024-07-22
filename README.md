@@ -74,7 +74,7 @@ Close Gephi and load the saved network file again.
 ### Part 2.2: Visualizing the network 
 
 Now that you have loaded network data, it's time to make the visualization look nice, rather than random. 
-On top of the bottom left "Layout" pane, select ForceAtlas 2 from the dropdown menu, and press "Run". 
+On top of the bottom left "Layout" pane, select "ForceAtlas 2" from the dropdown menu, and press "Run". 
 Once the visualization has converged, press "Stop". You should see a visualization similar to the figure below. 
 
 ![Gephi-visualization](https://github.com/franktakes/gephi-tutorial/blob/main/gephi-random-visualization.png?raw=true)
@@ -92,23 +92,23 @@ Finally, note that you can zoom in on the visualization itself using your mouse'
 
 When the layout is satisfactory, we can start to spice up the visualizaiton and move away from black-and-white dots and lines. 
 Using the top left box "Appearance", almost everything about the visualization can be changed; the box looks small but offers a lot of possibilities. 
-* A: Who we are changing properties of, with the options being the nodes or the edges (2 options).
-* B: What visual property we are changing, the options (in order) being: color, size, label color and label size (4 options) (we discuss labels in a minute).
+Corresponding to the four red boxes in the figure below, it is possible to change:
+* A: What we are changing properties of, with the options being the nodes or the edges (2 options).
+* B: What visual property we are changing, the options (in order) being: color, size, label color and label size (4 options); we discuss labels in [Part 2.4: Labels](#part-2-4-labels).
 * C: How the change should be made (3 options):
 	* Unique: every node/edge gets the same visual property value.
 	* Partition: we set the visual property value based on some attribute of the node for which several categorical attribute values can exist.
 	* Ranking: we set the visual property value propertional to some numeric (possibly continuous) attribute of the node.
 * D: How we actually set the value (screen may change depending on choices made for A, B and C).
   
-See the four red boxes in the figure below.
+ It is worth noting that a total of 2 x 4 x 3 = 24 visual aspects can be changed.
 
 ![Gephi-appearance](https://github.com/franktakes/gephi-tutorial/blob/main/gephi-appearance-annotated.png?raw=true)
 
 _Figure: The "Appearance" subwindow to change node and edge (label) color and size_
 
-It is worth noting that a total of 2 x 4 x 3 = 24 visual aspects can be changed. 
-
-**Task**: Set the node size proportional to a ranking based on degree, and node color based on indegree. Your visualization may look something like the figure below.
+**Task**: Set the node size proportional to a ranking based on degree (number of connections), and node color based on indegree (number of incoming connections). 
+Your visualization may look something like the figure below.
 (For now, ignore the "Partition" tab; it will be discussed in [Part 4: A real-world network visualization](#part-4-a-second-real-world-network-visualization).)
 
 ![Gephi-visualization](https://github.com/franktakes/gephi-tutorial/blob/main/gephi-visualization.png?raw=true)
@@ -117,8 +117,8 @@ _Figure: Stylized visualization of a random directed graph with 50 nodes_
 
 ### Part 2.4: Labels
 
-The label of a node (or edge) is a particular characteristic human readable description of the node (or edge). 
-Its display can be enabled using the "Show Node Labels" button in the set of icons at the bottom of the Graph subwindow (button G in the figure below).
+The label of a node (or edge) is a readable description of the node (or edge); typically more meaningful than the numeric ID. 
+Its visibility can be enabled using the "Show Node Labels" button in the set of icons at the bottom of the Graph subwindow (button G in the figure below).
 One or more of the data attributes of the nodes are then shown as textual label; button Q allows one to set which attributes this pertains. 
 By default, the "Label" node attribute is used, which in case of the random graph is the ID of the node.
 
