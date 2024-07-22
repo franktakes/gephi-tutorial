@@ -22,6 +22,10 @@ Do you want to reference this tutorial? Please use the following format:
 * [Part 0: Installation](#part-0-installation)
 * [Part 1: What do we see?](#part-1-what-do-we-see)
 * [Part 2: A first visualization of a network](#part-2-a-first-visualization-of-a-network)
+* [Part 3: Data laboratory](#part-3-data-laboratory)
+* [Part 4: A real-world network visualization](#part-4-a-second-real-world-network-visualization)
+* [Part 5: Exporting a network visualization](part-5-exporting-a-network-visualization)
+* [Part 6: Advanced features](#part-6-advanced-features)
 
 ## Part 0: Installation
 
@@ -53,7 +57,7 @@ In this part of the tutorial, we will make a first network visualization.
 
 ### Part 2.1: Loading (random) data and saving a project
 
-A first step is to make sure that there is data to visualize. Custom real-world [data import and export](#datalaboratory) will be discussed a bit later. For now we generate some *random network data*. 
+A first step is to make sure that there is data to visualize. Custom real-world data import and export will be discussed in [Part 3: Data laboratory](#part-3-data-laboratory). For now we generate some **random network data**. 
 Press "File", "Generate", "Random Graph". By default, a network with 50 nodes in which a fraction of 0.05 of the edges are present, is generated after pressing "OK". The nodes are initially randomly placed, and links will be directed (notice the arrows). Basic statistics are presented on the top right, in the "Context" subwindow. 
 
 First things first: similar to working in a text document, you may want to regularly save your work, and perhaps store intermediate versions under a different name as you progress. Save your project as a .gephi file. Go to "File", "Save" and choose a suitable filename and location. 
@@ -105,7 +109,15 @@ _Figure: Buttons at the bottom of the Graph pane_
 
 Icon A resets the viewport such that the entire network is visible; buttons B-D reset certain visual properties. 
 
-**Task**: Play around with the various buttons A-P and observe what happens to the visualization. 
+**Task**: Enable node labels, and play around with the various buttons A-P and observe what happens to the visualization. 
 
 ![Gephi-bottom-buttons](https://github.com/franktakes/gephi-tutorial/blob/main/gephi-graph-bottom-buttons-annotated.png?raw=true)
 _Figure: Buttons at the bottom of the Graph pane_
+
+## Part 3: Data laboratory
+
+## Part 4: A second real-world network visualization
+
+## Part 5: Exporting a network visualization
+
+## Part 6: Advanced features
