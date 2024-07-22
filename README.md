@@ -138,3 +138,21 @@ Icon A resets the viewport such that the entire network is visible; buttons B-D 
 ## Part 5: Exporting a network visualization
 
 ## Part 6: Advanced features
+
+
+Based on the tutorial above, you will likely develop your own iterative process in which you import data, and then play with layout algorithms, filters and statistics, before exporting a finalized network visualization. 
+
+Many more things are possible with Gephi, often implemented through [Gephi Plugins](https://gephi.org/plugins/#/). 
+
+- [GeoLayout](https://gephi.org/plugins/#/plugin/geolayout-plugin) to visualize nodes at particular coordinates on the world map often used together with [MapsOfCountries](https://gephi.org/plugins/#/plugin/mapofcountries) to show the outline of the world, a country or region. 
+
+- [MultimodeNetworksTransformationPlugin](https://gephi.org/plugins/#/plugin/multimode): a plugin for network projection, i.e., for modifying a network with multiple types of nodes (as defined by particular categorical node attributes), i.e., multipartitie networks, to unipartitate networks that can be meaningfully analyzed using Gephi. 
+
+- The [BoundingDiameters](https://gephi.org/plugins/#/plugin/boundingdiametersssuite) algorithm for quickly computing the exact diameter (longest shortest path length) of a network. 
+
+- The [Leiden Algorithm](https://gephi.org/plugins/#/plugin/leiden-algorithm-gephi-plugin), a community detection algorithm similar to "Modularity" discussed above, but solving a number of bugs and generally attaining higher quality partitionings of the network. 
+
+Thank you for walking through this tutorial! I hope you enjoyed it.
+
+See details on top on how to [reference](#referencing) this tutorial. 
+Feedback and suggestions are welcome (via Github "Issues"); also (and especially!) from students.
