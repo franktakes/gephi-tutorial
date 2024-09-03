@@ -140,28 +140,50 @@ Next, we will learn how to modify the network data underling a Gephi visualizati
 
 We turn to Gephi's second main window, being the Data laboratory. For a random graph, it should look like the figure below.
 
+![Gephi-bottom-buttons](https://github.com/franktakes/gephi-tutorial/blob/main/img/gephi-data-laboratory-annotated.png?raw=true)
+_Figure: Buttons at the bottom of the Graph pane_
+
 Here, the data behind the network can be inspected. On the top left, it is possible to switch between "Nodes" and "Edges"; which brings up the node list or the edge list in the data table below. 
 A node is always identified by a (typically numerical) "Id", and so is an edge, however, more importantly, an edge is defined by a "Source" and a "Target", of which the values refer to the Id of a node. 
 
-The Data labaratory can be used to manually change the data behind the graph, adding, removing and modifying the nodes, edges and their attributes. 
+The Data labaratory can be used to manually change the data behind the graph, i.e., adding, removing and modifying the nodes, edges and their attributes. 
 Adding nodes and edges can be done by using the respective buttons on top of the data table, and modifying one particular node or edge can be done by right clicking and selecting edit-option.
 Changes the the columns or column-wise modifications for all or multiple rows, can be effectuated using the buttons at the bottom of the data table.
 
-**Task 3a** 
-
-Create a new graph in which you represent your direct family members as nodes, and the connections between them as edges. Add a node attribute "Label" for their name, as well one for their "Age". You can also choose an edge attribute of choice (for example, a binary attribute indicating whether the two family members physically live together). When your data is complete, visualize the graph in the "Overview" tab; be sure to enable labels and choose meaningful colors for the nodes and edges. 
+**Task 3.1**: Create a new graph in which you represent your direct/close family members as nodes, and the blood connections between them as edges. Add a node attribute "Label" for their name, as well one for their "Age". You can also add an edge attribute of choice (for example, a binary attribute indicating whether the two family members physically live together). When your data is complete, visualize the graph in the "Overview" tab; be sure to enable labels and choose meaningful colors for the nodes and edges based on either network properties or attributes. 
 
 ### 3.2 Importing data 
 
+The node and edge lists of Gephi can also be filled by importing data from CSV files, or even (Excel) spreadsheets. For this, use the "Import spreadsheet" button, which invokes an import window. 
+(Note that the same type of import window can be invoked when using the "File", "Open" menu button, and sselecting a non-Gephi file that does have properties of a data file, i.e., is column-based.)
+Along the way, you will asked to select the right data format ("Edges table" and "Nodes table") are the edge list and node list formats most commonly used. 
+The final screen asks whether the graph should be directed or undirected, and whether the data should be appended to the current workspace
 
+**Task 3.2**: Download the [small-gephiready.tsv](https://github.com/franktakes/gephi-tutorial/blob/main/small-gephiready.tsv?raw=true) edge list file, and load it into Gephi via the Data laboratory. This .tsv file has tab-separated columns. Go back to the Overview screen and create a visually appealing visualization. The parts of the tutorial below will also use this dataset. 
 
+### 3.3 Exporting data 
+
+Similar to importing, both the node and edge lists can also be exported for reuse in another tool using the "Export table" button.
 
 ## Part 4: A second real-world network visualization
 
+Filtering
+
+Statistics
+
+Communities
+
 ## Part 5: Exporting a network visualization
 
-## Part 6: Advanced features
+In the third Gephi tab, being Preview, it is possible to change final visual properties before exporting the visualization as crafted in the Overview tab. 
+The "Refresh" button in the bottom right should be pressed to update the visualization. The visual you get may not look identical to what you see in the Overview tab.
+In particular, the option "Curved" of the edgges needs to be disabled.
 
+After adjusting the desired properties of the Nodes, Node Labels, Edges and Edge Labels on the left, the button "Export: SVG/PDF/PNG" leads to a screen where the destination of the output file can be chosen. Be sure to choose a vector graphic format such as SVG, or, usually easiest, PDF. In this final window, the "Options" button on the bottom right.
+
+**Task 5**: Export your visualization of the small-gephiready.tsv file into a rectangle-shaped vector graphic PDF. 
+
+## Part 6: Advanced features
 
 Based on the tutorial above, you will likely develop your own iterative process in which you import data, and then play with layout algorithms, filters and statistics, before exporting a finalized network visualization. 
 
