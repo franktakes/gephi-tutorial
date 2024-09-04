@@ -141,10 +141,10 @@ Next, we will learn how to modify the network data underling a Gephi visualizati
 We turn to Gephi's second main window, being the Data laboratory. For a random graph, it should look like the figure below.
 
 ![Gephi-data-laboratory](https://github.com/franktakes/gephi-tutorial/blob/main/img/gephi-data-laboratory-annotated.png?raw=true)
-_Figure: Gephi's Data laboratory
+_Figure: Gephi's Data laboratory_
 
 Here, the data behind the network can be inspected. On the top left, it is possible to switch between "Nodes" and "Edges"; which brings up the node list or the edge list in the data table below. 
-A node is always identified by a (typically numerical) "Id", and so is an edge, however, more importantly, an edge is defined by a "Source" and a "Target", of which the values refer to the Id of a node. 
+A node is always identified by a (typically numerical) `Id`. An edge is in turn defined by a `Source` and a `Target`, of which the values refer to the `Id` of a node. 
 
 The Data labaratory can be used to manually change the data behind the graph, i.e., adding, removing and modifying the nodes, edges and their attributes. 
 Adding nodes and edges can be done by using the respective buttons on top of the data table, and modifying one particular node or edge can be done by right clicking and selecting edit-option.
@@ -167,13 +167,55 @@ Similar to importing, both the node and edge lists can also be exported for reus
 
 ## Part 4: A second real-world network visualization
 
-Filtering
+Now that we know how to manipulate the data behind a visualization, it's time to explore more advanced network analysis and visualization options in Gephi. 
+We turn back to the Overview tab, and assume that the [small-gephiready.tsv](https://github.com/franktakes/gephi-tutorial/blob/main/small-gephiready.tsv?raw=true) file has been loaded as an undirected graph. After visualizing this graph using the ForceAtlas2 algorithm with the scaling parameter set to 5.0, he screen should look something like below. 
 
-Statistics
+![Gephi-second-visualization](https://github.com/franktakes/gephi-tutorial/blob/main/img/gephi-second-visualization.png?raw=true)
+_Figure: Visualization of the [small-gephiready.tsv](https://github.com/franktakes/gephi-tutorial/blob/main/small-gephiready.tsv?raw=true) network_
 
-Communities
+## 4.1 Statistics
+
+Through the Statistics window, various properties of the network can be computed. After computation, so after pressing the button corresponding to the statistic, and overview window window is produced showing some results, typically the value or distribution of that statistic is shown (albeit in a suboptimal visual, missing for example logarithmic axes). But more importantly, in the node list, a column is added containing the value of that particular metric. Many of these metrics are known as centrality measures, that determine the importance of a node based on the structural position of that node in the network. 
+This centrality value can in turn be used to adjust for example the color or size of a node (see [Part 2: A first visualization of a network]. (#part-2-a-first-visualization-of-a-network)). 
+
+* Average Degree: computes the average degree of nodes, and add the `Degree` column to the node list (and Indegree and Outdegree in case of directed graphs)
+* Avg. Weighted Degree: same as above, but then specific to weighted networks
+* Network Diameter: computes the radius and diameter (minimal and maximal shortest path length) values, as well as `Eccentricity`, `Closeness centrality`, `Harmonic closeness centrality` and `Betweenness centrality` values for each node. 
+* Graph Density, Avg Clustering Coefficient, Avg. Path Length: computes these metrics (one value for the graph as a whole)
+* PageRank, HITS, Eigenvector centrality: computes these centrality measures, adding columns `PageRank`, `HITS` and `Eigenvector centrality` to the node list 
+* Connected components: assigns to each node a `Component ID` that indicates which component it belongs to 
+* Community detection: covered below 
+
+**Task 4.1**: Compute Betweenness centrality and PageRank and set respectively node color and size proportional to these two measures. Observe their values in the Data laboratory, and determine the top five nodes based on each measure. 
+
+## 4.2 Communities
+
+Apart from computing measures that say something about the structural importance of a node, or a particular value of the graph as a whole, we may also be interested in group formation, i.e., clusters in the network, which are called communities. Various algorithms for detecting these communities exist, and under the "Community detection" header, two of these algorithms can be found. 
+One is based on modularity, which finds communities by looking 
+
+* Community detection (multiple algorithms): compute an integer value for each node that becomes a node attribute. For example, "Modularity", indicating to which community a node belongs based on maximizing the number of intra-community links and minimizing the number of links between communities. A resolution parameter can be used to increase or decrease the number of communities found.
+
+**Task 4.2**: Run Modularity and color (partition) the nodes based on their community (the `Modularity Class` attribute). The result should look like the figure below. 
+
+![Gephi-pr-communities](https://github.com/franktakes/gephi-tutorial/blob/main/img/gephi-pr-communities.png?raw=true)
+_Figure: Visualization of the [small-gephiready.tsv](https://github.com/franktakes/gephi-tutorial/blob/main/small-gephiready.tsv?raw=true) network, with node color based on community structure, and node size based on PageRank_
+
+## 4.3 Filters
+
+The tab next to Statistics opens up a set of filters. These filters can be used to only display certain parts of the graph. You can select a filter and drag it to the "Queries" list below, to activate it. Some noteworthy filters include:
+
+* Toplogy, Giant component: only show the largest connected component (does nothing in case the network consists of just one connected component, such as small-gephiready.tsv)
+* Atttributes, Partition: only show nodes of which an attribute has a certain value
+* Attributes, Range: only show nodes of which an attribute has a certain value; for example setting a cut-off value for the degree, or based on centrality. 
+* Edges, Edge Weight: an interesting filter to, for a weighted network, only show the strongest links (handy when the graph is too dense to meaningfully visualize) 
+
+Note that filters can also be combined (which is not always intuitive). 
+
+**Task 4.3**: Use the filters to visualize one of the communities you found, and observe what happens to the Data laboratory as the filter is enabled. 
 
 ## Part 5: Exporting a network visualization
+
+You now have all the skills to visualize a network in a meaningful way, and time to export a picture-perfect version of it for reuse; for example in a presentation, report or a paper. 
 
 In the third Gephi tab, being Preview, it is possible to change final visual properties before exporting the visualization as crafted in the Overview tab. 
 The "Refresh" button in the bottom right should be pressed to update the visualization. The visual you get may not look identical to what you see in the Overview tab.
@@ -188,6 +230,10 @@ After adjusting the desired properties of the Nodes, Node Labels, Edges and Edge
 Based on the tutorial above, you will likely develop your own iterative process in which you import data, and then play with layout algorithms, filters and statistics, before exporting a finalized network visualization. 
 
 Many more things are possible with Gephi, often implemented through [Gephi Plugins](https://gephi.org/plugins/#/). 
+
+- Weighted networks; although not covered in this tutorial, the "Weight" column of the edge list essentially facilitates this type of underlying network data.
+
+- Dynamic networks that change/evolve over time; see [Gephi's documentation on dynamic networks](https://docs.gephi.org/User_Manual/Import_Dynamic_Data/)
 
 - [GeoLayout](https://gephi.org/plugins/#/plugin/geolayout-plugin) to visualize nodes at particular coordinates on the world map often used together with [MapsOfCountries](https://gephi.org/plugins/#/plugin/mapofcountries) to show the outline of the world, a country or region. 
 
