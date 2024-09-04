@@ -44,7 +44,7 @@ Gephi has 3 main "Screens", each with its own functionality:
 
 ![Gephi-threetabs](https://github.com/franktakes/gephi-tutorial/blob/main/img/gephi-threetabs-annotated.png?raw=true)
 
-_Figure: Gephi, with the three main Gephi screens highlighted._
+_Figure: Gephi, with the three main Gephi screens highlighted. The numbered squares (2.2 and 2.3) refer to the subsections below._
 
 For now, we start in the "Overview" screen, which should have several subwindows: "Appearance" and "Layout" on the left, "Graph" in the middle and "Context", "Filters" and "Statistics" on the right. 
 On some installations these subwindows might not all be visible; you can use the "Window" menu option on top to make these particular subwindows visible for you, and if necessary drag them to the right location. 
@@ -82,6 +82,7 @@ Once the visualization has converged, press "Stop". You should see a visualizati
 _Figure: Visualization of a random directed graph with 50 nodes_
 
 You can play around with parameters such as "Scaling" to disperse the nodes more. 
+Should you have multiple smaller components, then setting a higher "Gravity" parameter can prevent these components from "drifting away" from the giant component. 
 Notice that this entire layout process changes nothing more than the (x,y) position of the nodes. 
 By choosing "Random Layout" as the visualization algorithm, nodes can be put back at a random position. 
 Finally, note that you can zoom in on the visualization itself using your mouse's scroll wheel (or laptop touchpad equivalent thereof). 
@@ -129,6 +130,7 @@ By default, the "Label" node attribute is used, which in case of the random grap
 _Figure: Buttons at the bottom of the Graph pane_
 
 Icon A resets the viewport such that the entire network is visible; buttons B-D reset certain visual properties. Label G through Q adjust various meaningful aspects of the labels, such as their size, font and color, as well as provide the opportunity to adjust properties and visibility of the edges. 
+Note: sometimes, edges become hard to see as nodes are colored, which can sometimes be counteracted with button I. 
 
 **Task 2.4**: Enable node labels, and play around with the various buttons A-P and observe what happens to the visualization. 
 
@@ -139,12 +141,12 @@ Next, we will learn how to modify the network data underlying a Gephi visualizat
 ### 3.1 Modifying the network data 
 
 We turn to Gephi's second main window, being the Data laboratory. For a random graph, it should look like the figure below.
-
-![Gephi-data-laboratory](https://github.com/franktakes/gephi-tutorial/blob/main/img/gephi-data-laboratory-annotated.png?raw=true)
-_Figure: Gephi's Data laboratory_
-
 Here, the data behind the network can be inspected. On the top left, it is possible to switch between "Nodes" and "Edges"; which brings up the node list or the edge list in the data table below. 
 A node is always identified by a (typically numerical) `Id`. An edge is in turn defined by a `Source` and a `Target`, of which the values refer to the `Id` of a node. 
+
+![Gephi-data-laboratory](https://github.com/franktakes/gephi-tutorial/blob/main/img/gephi-data-laboratory-annotated.png?raw=true)
+_Figure: Gephi's Data laboratory, showing the edge list (so, after pressing "Edges" on the top left)_
+
 
 The Data laboratory can be used to manually change the data behind the graph, i.e., adding, removing and modifying the nodes, edges and their attributes. 
 Adding nodes and edges can be done by using the respective buttons on top of the data table, and modifying one particular node or edge can be done by right clicking and selecting edit-option.
@@ -160,7 +162,8 @@ The node and edge lists of Gephi can also be filled by importing data from CSV f
 Along the way, you are asked to select the right data format. Here, "Edges table" and "Nodes table" are the edge list and node list formats most commonly used, with `Id` being the identifier column in the node list, and two columns `Source` and `Target` in the edge list. 
 The final screen asks whether the graph should be directed or undirected, and whether the data should be appended to the current workspace, or whether a new workspace should be made. The append-option can be used to merge multiple datasets based on the unique identifier `Id` of the nodes.
 
-**Task 3.2**: Download the [small-gephiready.tsv](https://github.com/franktakes/gephi-tutorial/blob/main/small-gephiready.tsv?raw=true) edge list file, and load it into Gephi via the Data laboratory. This .tsv file has tab-separated columns. Go back to the Overview screen and create a visually appealing visualization. The parts of the tutorial below will also use this dataset. 
+**Task 3.2**: Download the [small-gephiready.tsv](https://github.com/franktakes/gephi-tutorial/blob/main/small-gephiready.tsv?raw=true) edge list file, and load it into Gephi via the Data laboratory. This .tsv file has tab-separated columns. Go back to the Overview screen and create a visually appealing visualization. 
+The rest of the tutorial will also use this dataset. 
 
 ### 3.3 Exporting data 
 
