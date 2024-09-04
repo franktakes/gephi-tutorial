@@ -201,24 +201,3 @@ Thank you for walking through this tutorial! I hope you enjoyed it.
 
 See details on top on how to [reference](#referencing) this tutorial. 
 Feedback and suggestions are welcome (via Github "Issues"); also (and especially!) from students.
-
-------------------------------------------------------------------------------------
-
-OLD:
-
-
-## Part 3: Data laboratory
-
-## Part 4: A second real-world network visualization
-
-filtering 
-
-advanced algo's, statistics (such as degree give results but it's about data) 
-communities 
-
-
-
-## Part 5: Exporting a network visualization
-
-preview
-create some export 
