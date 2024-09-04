@@ -155,47 +155,48 @@ Changes the the columns or column-wise modifications for all or multiple rows, c
 ### 3.2 Importing data 
 
 The node and edge lists of Gephi can also be filled by importing data from CSV files, or even (Excel) spreadsheets. For this, use the "Import spreadsheet" button, which invokes an import window. 
-(Note that the same type of import window can be invoked when using the "File", "Open" menu button, and sselecting a non-Gephi file that does have properties of a data file, i.e., is column-based.)
-Along the way, you will asked to select the right data format ("Edges table" and "Nodes table") are the edge list and node list formats most commonly used. 
-The final screen asks whether the graph should be directed or undirected, and whether the data should be appended to the current workspace
+(Note that the same type of import window can be invoked when using the "File", "Open" menu button, and selecting a non-Gephi file that does have properties of a data file, i.e., is column-based.)
+
+Along the way, you will asked to select the right data format. Here, "Edges table" and "Nodes table" are the edge list and node list formats most commonly used, with `Id` being the identifier column in the node list, and two columns `Source` and `Target` in the edge list. 
+The final screen asks whether the graph should be directed or undirected, and whether the data should be appended to the current workspace, or whether a new workspace should be made. The append-option can be used to merge multiple datasets based on the unique identifier `Id` of the nodes.
 
 **Task 3.2**: Download the [small-gephiready.tsv](https://github.com/franktakes/gephi-tutorial/blob/main/small-gephiready.tsv?raw=true) edge list file, and load it into Gephi via the Data laboratory. This .tsv file has tab-separated columns. Go back to the Overview screen and create a visually appealing visualization. The parts of the tutorial below will also use this dataset. 
 
 ### 3.3 Exporting data 
 
-Similar to importing, both the node and edge lists can also be exported for reuse in another tool using the "Export table" button.
+Similar to importing, both the node and edge lists can also be exported for reuse in another tool using the "Export table" button. You can then reuse or amend this data, for example in Excel, or in a python pandas dataframe. 
 
 ## Part 4: A second real-world network visualization
 
 Now that we know how to manipulate the data behind a visualization, it's time to explore more advanced network analysis and visualization options in Gephi. 
-We turn back to the Overview tab, and assume that the [small-gephiready.tsv](https://github.com/franktakes/gephi-tutorial/blob/main/small-gephiready.tsv?raw=true) file has been loaded as an undirected graph. After visualizing this graph using the ForceAtlas2 algorithm with the scaling parameter set to 5.0, he screen should look something like below. 
+We turn back to the Overview tab, and assume that the [small-gephiready.tsv](https://github.com/franktakes/gephi-tutorial/blob/main/small-gephiready.tsv?raw=true) file has been loaded as an undirected graph. After visualizing this graph using the ForceAtlas2 algorithm with the scaling parameter set to 5.0, the screen should look something like below. 
 
 ![Gephi-second-visualization](https://github.com/franktakes/gephi-tutorial/blob/main/img/gephi-second-visualization.png?raw=true)
 _Figure: Visualization of the [small-gephiready.tsv](https://github.com/franktakes/gephi-tutorial/blob/main/small-gephiready.tsv?raw=true) network_
 
 ## 4.1 Statistics
 
-Through the Statistics window, various properties of the network can be computed. After computation, so after pressing the button corresponding to the statistic, and overview window window is produced showing some results, typically the value or distribution of that statistic is shown (albeit in a suboptimal visual, missing for example logarithmic axes). But more importantly, in the node list, a column is added containing the value of that particular metric. Many of these metrics are known as centrality measures, that determine the importance of a node based on the structural position of that node in the network. 
-This centrality value can in turn be used to adjust for example the color or size of a node (see [Part 2: A first visualization of a network]. (#part-2-a-first-visualization-of-a-network)). 
+Through the Statistics window, various properties of the network can be computed. After computation, so after pressing the button corresponding to the statistic, an overview window is produced showing some results. 
+Typically the value or distribution of that statistic is shown (albeit in a suboptimal visual, missing for example logarithmic axes). But more importantly, in the node list, a column is added containing the value of that particular metric. Many of these metrics are known as **centrality measures**, that determine the importance of a node based on the structural position of that node in the network. 
+This centrality value can in turn be used to adjust for example the color or size of a node (see [Part 2: A first visualization of a network](#part-2-a-first-visualization-of-a-network)). 
 
-* Average Degree: computes the average degree of nodes, and add the `Degree` column to the node list (and Indegree and Outdegree in case of directed graphs)
-* Avg. Weighted Degree: same as above, but then specific to weighted networks
+* Average Degree: computes the average degree of nodes, and adds the `Degree` column to the node list (and Indegree and Outdegree in case of directed graphs).
+* Avg. Weighted Degree: same as above, but then specific to weighted networks.
 * Network Diameter: computes the radius and diameter (minimal and maximal shortest path length) values, as well as `Eccentricity`, `Closeness centrality`, `Harmonic closeness centrality` and `Betweenness centrality` values for each node. 
-* Graph Density, Avg Clustering Coefficient, Avg. Path Length: computes these metrics (one value for the graph as a whole)
-* PageRank, HITS, Eigenvector centrality: computes these centrality measures, adding columns `PageRank`, `HITS` and `Eigenvector centrality` to the node list 
-* Connected components: assigns to each node a `Component ID` that indicates which component it belongs to 
-* Community detection: covered below 
+* Graph Density, Avg Clustering Coefficient, Avg. Path Length: computes these metrics (one value for the graph as a whole).
+* PageRank, HITS, Eigenvector centrality: computes these centrality measures, adding columns `PageRank`, `HITS` and `Eigenvector centrality` to the node list
+* Connected components: assigns to each node a `Component ID` that indicates which component (group of nodes connected by (paths of incident) edges) it belongs to. 
+* Community detection: covered below.
 
-**Task 4.1**: Compute Betweenness centrality and PageRank and set respectively node color and size proportional to these two measures. Observe their values in the Data laboratory, and determine the top five nodes based on each measure. 
+**Task 4.1**: Compute Betweenness centrality and PageRank for the [small-gephiready.tsv](https://github.com/franktakes/gephi-tutorial/blob/main/small-gephiready.tsv?raw=true) graph and in the visualization, set respectively node color and size proportional to these two measures. Observe their values in the Data laboratory, and determine the top five nodes based on each measure. 
 
 ## 4.2 Communities
 
-Apart from computing measures that say something about the structural importance of a node, or a particular value of the graph as a whole, we may also be interested in group formation, i.e., clusters in the network, which are called communities. Various algorithms for detecting these communities exist, and under the "Community detection" header, two of these algorithms can be found. 
-One is based on modularity, which finds communities by looking 
+Apart from computing measures that say something about the nodes or the graph as a whole, we may also be interested in groups, i.e., clusters in the network, which in a network analysis context are called **communities**. Various algorithms for detecting these communities exist, and under the "Community detection" header, two of these algorithms can be found. 
 
-* Community detection (multiple algorithms): compute an integer value for each node that becomes a node attribute. For example, "Modularity", indicating to which community a node belongs based on maximizing the number of intra-community links and minimizing the number of links between communities. A resolution parameter can be used to increase or decrease the number of communities found.
+* Community detection (multiple algorithms): compute an integer value for each node that becomes a node attribute. For example, "Modularity", indicating to which community a node belongs based on an optimization process maximizing the number of intra-community links and minimizing the number of links between communities. A resolution parameter can be used to increase or decrease the number of communities found.
 
-**Task 4.2**: Run Modularity and color (partition) the nodes based on their community (the `Modularity Class` attribute). The result should look like the figure below. 
+**Task 4.2**: Run Modularity and color (partition) the nodes based on their community (the `Modularity Class` attribute). The result should roughly look like the figure below. 
 
 ![Gephi-pr-communities](https://github.com/franktakes/gephi-tutorial/blob/main/img/gephi-pr-communities.png?raw=true)
 _Figure: Visualization of the [small-gephiready.tsv](https://github.com/franktakes/gephi-tutorial/blob/main/small-gephiready.tsv?raw=true) network, with node color based on community structure, and node size based on PageRank_
@@ -204,10 +205,10 @@ _Figure: Visualization of the [small-gephiready.tsv](https://github.com/franktak
 
 The tab next to Statistics opens up a set of filters. These filters can be used to only display certain parts of the graph. You can select a filter and drag it to the "Queries" list below, to activate it. Some noteworthy filters include:
 
-* Toplogy, Giant component: only show the largest connected component (does nothing in case the network consists of just one connected component, such as small-gephiready.tsv)
-* Atttributes, Partition: only show nodes of which an attribute has a certain value
-* Attributes, Range: only show nodes of which an attribute has a certain value; for example setting a cut-off value for the degree, or based on centrality. 
-* Edges, Edge Weight: an interesting filter to, for a weighted network, only show the strongest links (handy when the graph is too dense to meaningfully visualize) 
+* Topology, Giant component: only show the largest connected component (does nothing in case the network consists of just one connected component, such as in our practice file).
+* Atttributes, Partition: only show nodes of which an attribute has a certain  value.
+* Attributes, Range: only show nodes of which an attribute is a certain range of values; for example setting a cut-off value for the degree, or based on centrality. 
+* Edges, Edge Weight: an often useful filter to, for a weighted network, only show the strongest links (handy when the graph is too dense to meaningfully visualize). 
 
 Note that filters can also be combined (which is not always intuitive). 
 
@@ -223,7 +224,10 @@ In particular, the option "Curved" of the edgges needs to be disabled.
 
 After adjusting the desired properties of the Nodes, Node Labels, Edges and Edge Labels on the left, the button "Export: SVG/PDF/PNG" leads to a screen where the destination of the output file can be chosen. Be sure to choose a vector graphic format such as SVG, or, usually easiest, PDF. In this final window, the "Options" button on the bottom right.
 
-**Task 5**: Export your visualization of the small-gephiready.tsv file into a rectangle-shaped vector graphic PDF. 
+![Gephi-preview](https://github.com/franktakes/gephi-tutorial/blob/main/img/gephi-preview.png?raw=true)
+_Figure: Gephi's Preview tab for exporting the visualization for reuse
+
+**Task 5**: Export your visualization of the small-gephiready.tsv file into a rectangle-shaped vector graphic PDF, with a colored background if desired. 
 
 ## Part 6: Advanced features
 
