@@ -83,7 +83,7 @@ _Figure: Visualization of a random directed graph with 50 nodes_
 
 You can play around with parameters such as "Scaling" to disperse the nodes more. 
 Notice that this entire layout process changes nothing more than the (x,y) position of the nodes. 
-By choosing "Random Layout" as the visualization algoritm, nodes can be put back at a random position. 
+By choosing "Random Layout" as the visualization algorithm, nodes can be put back at a random position. 
 Finally, note that you can zoom in on the visualization itself using your mouse's scroll wheel (or laptop touchpad equivalent thereof). 
 
 **Task 2.2**: Play around with some different visualization algorithms and their parameters. 
@@ -91,7 +91,7 @@ Extra: generate larger graphs and observe how algorithm complexity of for exampl
 
 ### Part 2.3: Node and edge size and color
 
-When the layout is satisfactory, we can start to spice up the visualizaiton and move away from black-and-white dots and lines. 
+When the layout is satisfactory, we can start to spice up the visualization and move away from black-and-white dots and lines. 
 Using the top left box "Appearance", almost everything about the visualization can be changed; the box looks small but offers a lot of possibilities. 
 Corresponding to the four red boxes in the figure below, it is possible to change:
 * A: What we are changing properties of, with the options being the nodes or the edges (2 options).
@@ -99,7 +99,7 @@ Corresponding to the four red boxes in the figure below, it is possible to chang
 * C: How the change should be made (3 options):
 	* Unique: every node/edge gets the same visual property value.
 	* Partition: we set the visual property value based on some attribute of the node for which several categorical attribute values can exist.
-	* Ranking: we set the visual property value propertional to some numeric (possibly continuous) attribute of the node.
+	* Ranking: we set the visual property value proportional to some numeric (possibly continuous) attribute of the node.
 * D: How we actually set the value (screen may change depending on choices made for A, B and C).
   
  It is worth noting that a total of 2 x 4 x 3 = 24 visual aspects can be changed.
@@ -112,7 +112,7 @@ _Figure: The "Appearance" subwindow to change node and edge (label) color and si
 Your visualization may look something like the figure below.
 (For now, ignore the "Partition" tab; it will be discussed in [Part 4: A real-world network visualization](#part-4-a-second-real-world-network-visualization).)
 
-**Task 2.3b**: Node size is proportional to the size of the Layout space; experimentally confirm how a larger value for the "Scaling" parameter of the "ForceAtalas 2" algorithm will require a larger minimal and maximal value for node size. Play with different node color schemes (through the icon to the right of the colored bar in the "Ranking" tab).
+**Task 2.3b**: Node size is proportional to the size of the Layout space; experimentally confirm how a larger value for the "Scaling" parameter of the "ForceAtlas 2" algorithm will require a larger minimal and maximal value for node size. Play with different node color schemes (through the icon to the right of the colored bar in the "Ranking" tab).
 
 ![Gephi-visualization](https://github.com/franktakes/gephi-tutorial/blob/main/img/gephi-visualization.png?raw=true)
 
@@ -120,7 +120,7 @@ _Figure: Stylized visualization of a random directed graph with 50 nodes_
 
 ### Part 2.4: Labels
 
-The label of a node (or edge) is a readable description of the node (or edge). In a social network it can be someone's real name, rather than numeric ID.
+The label of a node (or edge) is a readable description of the node (or edge). In a social network it can be someone's real name, rather than a numeric ID.
 Label visibility can be enabled using the "Show Node Labels" button in the set of icons at the bottom of the Graph subwindow (button G in the figure below).
 One or more of the data attributes of the nodes are then shown as textual label; button Q allows one to set which attributes this pertains. 
 By default, the "Label" node attribute is used, which in case of the random graph is equal to the ID of the node.
@@ -134,7 +134,7 @@ Icon A resets the viewport such that the entire network is visible; buttons B-D 
 
 ## Part 3: Data laboratory
 
-Next, we will learn how to modify the network data underling a Gephi visualization.
+Next, we will learn how to modify the network data underlying a Gephi visualization.
 
 ### 3.1 Modifying the network data 
 
@@ -146,7 +146,7 @@ _Figure: Gephi's Data laboratory_
 Here, the data behind the network can be inspected. On the top left, it is possible to switch between "Nodes" and "Edges"; which brings up the node list or the edge list in the data table below. 
 A node is always identified by a (typically numerical) `Id`. An edge is in turn defined by a `Source` and a `Target`, of which the values refer to the `Id` of a node. 
 
-The Data labaratory can be used to manually change the data behind the graph, i.e., adding, removing and modifying the nodes, edges and their attributes. 
+The Data laboratory can be used to manually change the data behind the graph, i.e., adding, removing and modifying the nodes, edges and their attributes. 
 Adding nodes and edges can be done by using the respective buttons on top of the data table, and modifying one particular node or edge can be done by right clicking and selecting edit-option.
 Changes the the columns or column-wise modifications for all or multiple rows, can be effectuated using the buttons at the bottom of the data table.
 
@@ -157,7 +157,7 @@ Changes the the columns or column-wise modifications for all or multiple rows, c
 The node and edge lists of Gephi can also be filled by importing data from CSV files, or even (Excel) spreadsheets. For this, use the "Import spreadsheet" button, which invokes an import window. 
 (Note that the same type of import window can be invoked when using the "File", "Open" menu button, and selecting a non-Gephi file that does have properties of a data file, i.e., is column-based.)
 
-Along the way, you will asked to select the right data format. Here, "Edges table" and "Nodes table" are the edge list and node list formats most commonly used, with `Id` being the identifier column in the node list, and two columns `Source` and `Target` in the edge list. 
+Along the way, you are asked to select the right data format. Here, "Edges table" and "Nodes table" are the edge list and node list formats most commonly used, with `Id` being the identifier column in the node list, and two columns `Source` and `Target` in the edge list. 
 The final screen asks whether the graph should be directed or undirected, and whether the data should be appended to the current workspace, or whether a new workspace should be made. The append-option can be used to merge multiple datasets based on the unique identifier `Id` of the nodes.
 
 **Task 3.2**: Download the [small-gephiready.tsv](https://github.com/franktakes/gephi-tutorial/blob/main/small-gephiready.tsv?raw=true) edge list file, and load it into Gephi via the Data laboratory. This .tsv file has tab-separated columns. Go back to the Overview screen and create a visually appealing visualization. The parts of the tutorial below will also use this dataset. 
@@ -206,7 +206,7 @@ _Figure: Visualization of the [small-gephiready.tsv](https://github.com/franktak
 The tab next to Statistics opens up a set of filters. These filters can be used to only display certain parts of the graph. You can select a filter and drag it to the "Queries" list below, to activate it. Some noteworthy filters include:
 
 * Topology, Giant component: only show the largest connected component (does nothing in case the network consists of just one connected component, such as in our practice file).
-* Atttributes, Partition: only show nodes of which an attribute has a certain  value.
+* Attributes, Partition: only show nodes of which an attribute has a certain  value.
 * Attributes, Range: only show nodes of which an attribute is a certain range of values; for example setting a cut-off value for the degree, or based on centrality. 
 * Edges, Edge Weight: an often useful filter to, for a weighted network, only show the strongest links (handy when the graph is too dense to meaningfully visualize). 
 
@@ -225,7 +225,7 @@ In particular, the option "Curved" of the edgges needs to be disabled.
 After adjusting the desired properties of the Nodes, Node Labels, Edges and Edge Labels on the left, the button "Export: SVG/PDF/PNG" leads to a screen where the destination of the output file can be chosen. Be sure to choose a vector graphic format such as SVG, or, usually easiest, PDF. In this final window, the "Options" button on the bottom right.
 
 ![Gephi-preview](https://github.com/franktakes/gephi-tutorial/blob/main/img/gephi-preview.png?raw=true)
-_Figure: Gephi's Preview tab for exporting the visualization for reuse
+_Figure: Gephi's Preview tab for exporting the visualization for reuse_
 
 **Task 5**: Export your visualization of the small-gephiready.tsv file into a rectangle-shaped vector graphic PDF, with a colored background if desired. 
 
