@@ -140,8 +140,8 @@ Next, we will learn how to modify the network data underling a Gephi visualizati
 
 We turn to Gephi's second main window, being the Data laboratory. For a random graph, it should look like the figure below.
 
-![Gephi-bottom-buttons](https://github.com/franktakes/gephi-tutorial/blob/main/img/gephi-data-laboratory-annotated.png?raw=true)
-_Figure: Buttons at the bottom of the Graph pane_
+![Gephi-data-laboratory](https://github.com/franktakes/gephi-tutorial/blob/main/img/gephi-data-laboratory-annotated.png?raw=true)
+_Figure: Gephi's Data laboratory
 
 Here, the data behind the network can be inspected. On the top left, it is possible to switch between "Nodes" and "Edges"; which brings up the node list or the edge list in the data table below. 
 A node is always identified by a (typically numerical) "Id", and so is an edge, however, more importantly, an edge is defined by a "Source" and a "Target", of which the values refer to the Id of a node. 
