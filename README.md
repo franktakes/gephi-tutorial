@@ -219,7 +219,7 @@ Note that filters can also be combined (which is not always intuitive).
 
 ## Part 5: Exporting a network visualization
 
-You now have all the skills to visualize a network in a meaningful way, and time to export a picture-perfect version of it for reuse; for example in a presentation, report or a paper. 
+You now have all the skills to visualize a network in a meaningful way, and now it is time to export a picture-perfect version of it for reuse; for example in a presentation, report or a paper. 
 
 In the third Gephi tab, being Preview, it is possible to change final visual properties before exporting the visualization as crafted in the Overview tab. 
 The "Refresh" button in the bottom right should be pressed to update the visualization. The visual you get may not look identical to what you see in the Overview tab.
