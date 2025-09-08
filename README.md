@@ -31,7 +31,7 @@ Do you want to reference this tutorial? Please use the following format:
 ## Part 0: Installation
 
 * [Download Gephi](https://gephi.org/users/download) 0.10.1 from the Gephi website.
-* Install Gephi on your Windows, Linux or MacOS device; be sure to choose English as display language when asked, so that instructions match with your local installation.
+* Install Gephi on your Windows, Linux or MacOS device; be sure to choose English as the display language when asked, so that instructions match with your local installation.
 * After installation, start Gephi and close the Welcome window that pops up.
 * Use a [mouse](https://en.wikipedia.org/wiki/Computer_mouse) to more easily control the tool.
 
@@ -40,14 +40,14 @@ Do you want to reference this tutorial? Please use the following format:
 Gephi has 3 main "Screens", each with its own functionality: 
 * Overview: network visualization, data filtering and computation of network measures.
 * Data Laboratory: network data import, export, inspection and manipulation.
-* Preview: to export a final version of a visualization, for example to a vector graphic PDF.
+* Preview: to export a final version of a visualization, for example, to a vector graphic PDF.
 
 ![Gephi-threetabs](https://github.com/franktakes/gephi-tutorial/blob/main/img/gephi-threetabs-annotated.png?raw=true)
 
 _Figure: Gephi, with the three main Gephi screens highlighted. The numbered squares (2.2 and 2.3) refer to the subsections below._
 
 For now, we start in the "Overview" screen, which should have several subwindows: "Appearance" and "Layout" on the left, "Graph" in the middle and "Context", "Filters" and "Statistics" on the right. 
-On some installations these subwindows might not all be visible; you can use the "Window" menu option on top to make these particular subwindows visible for you, and if necessary drag them to the right location. 
+On some installations, these subwindows might not all be visible; you can use the "Window" menu option on top to make these particular subwindows visible for you, and if necessary, drag them to the right location. 
 
 **Task 1**: Install Gephi on your machine and make sure you see the correct subwindows in the "Overview" tab.
 
@@ -59,8 +59,8 @@ In this part of the tutorial, we will make a first network visualization.
 
 A first step is to make sure that there is data to visualize. 
 Custom real-world data import and export will be discussed in [Part 3: Data laboratory](#part-3-data-laboratory). 
-For now we generate some **random network data**. 
-Press "File", "Generate", "Random Graph". By default, a network with 50 nodes in which a fraction of 0.05 of the edges are present, is generated after pressing "OK". 
+For now, we generate some **random network data**. 
+Press "File", "Generate", "Random Graph". By default, a network with 50 nodes, in which a fraction of 0.05 of the edges are present, is generated after pressing "OK". 
 The nodes are initially randomly placed, and links will be directed (notice the arrows). 
 Basic statistics are presented on the top right, in the "Context" subwindow. 
 
@@ -88,15 +88,15 @@ By choosing "Random Layout" as the visualization algorithm, nodes can be put bac
 Finally, note that you can zoom in on the visualization itself using your mouse's scroll wheel (or laptop touchpad equivalent thereof). 
 
 **Task 2.2**: Play around with some different visualization algorithms and their parameters. 
-Extra: generate larger graphs and observe how algorithm complexity of for example the Fruchterman-Reingold algorithm starts to play its parts.  
+Extra: generate larger graphs and observe how the algorithm complexity of, for example, the Fruchterman-Reingold algorithm starts to play its part.  
 
 ### Part 2.3: Node and edge size and color
 
 When the layout is satisfactory, we can start to spice up the visualization and move away from black-and-white dots and lines. 
-Using the top left box "Appearance", almost everything about the visualization can be changed; the box looks small but offers a lot of possibilities. 
+Using the top left box "Appearance", almost everything about the visualization can be changed; the box looks small, but it offers a lot of possibilities. 
 Corresponding to the four red boxes in the figure below, it is possible to change:
 * A: What we are changing properties of, with the options being the nodes or the edges (2 options).
-* B: What visual property we are changing, the options (in order) being: color, size, label color and label size (4 options); we discuss labels in [Part 2.4: Labels](#part-2-4-labels).
+* B: What visual property we are changing; the options (in order) being: color, size, label color and label size (4 options). We discuss labels in [Part 2.4: Labels](#part-2-4-labels).
 * C: How the change should be made (3 options):
 	* Unique: every node/edge gets the same visual property value.
 	* Partition: we set the visual property value based on some attribute of the node for which several categorical attribute values can exist.
@@ -121,10 +121,10 @@ _Figure: Stylized visualization of a random directed graph with 50 nodes_
 
 ### Part 2.4: Labels
 
-The label of a node (or edge) is a readable description of the node (or edge). In a social network it can be someone's real name, rather than a numeric ID.
+The label of a node (or edge) is a readable description of the node (or edge). In a social network, it can be someone's real name, rather than a numeric ID.
 Label visibility can be enabled using the "Show Node Labels" button in the set of icons at the bottom of the Graph subwindow (button G in the figure below).
-One or more of the data attributes of the nodes are then shown as textual label; button Q allows one to set which attributes this pertains. 
-By default, the "Label" node attribute is used, which in case of the random graph is equal to the ID of the node.
+One or more of the data attributes of the nodes are then shown as a textual label; button Q allows one to set which attributes this pertains to. 
+By default, the "Label" node attribute is used, which, in the case of the random graph, is equal to the ID of the node.
 
 ![Gephi-bottom-buttons](https://github.com/franktakes/gephi-tutorial/blob/main/img/gephi-graph-bottom-buttons-annotated.png?raw=true)
 _Figure: Buttons at the bottom of the Graph pane_
@@ -140,34 +140,34 @@ Next, we will learn how to modify the network data underlying a Gephi visualizat
 
 ### 3.1 Modifying the network data 
 
-We turn to Gephi's second main window, being the Data laboratory. For a random graph, it should look like the figure below.
+We turn to Gephi's second main window, which is the Data laboratory. For a random graph, it should look like the figure below.
 Here, the data behind the network can be inspected. On the top left, it is possible to switch between "Nodes" and "Edges"; which brings up the node list or the edge list in the data table below. 
-A node is always identified by a (typically numerical) `Id`. An edge is in turn defined by a `Source` and a `Target`, of which the values refer to the `Id` of a node. 
+A node is always identified by a (typically numerical) `Id`. An edge is, in turn, defined by a `Source` and a `Target`, of which the values refer to the `Id` of a node. 
 
 ![Gephi-data-laboratory](https://github.com/franktakes/gephi-tutorial/blob/main/img/gephi-data-laboratory-annotated.png?raw=true)
 _Figure: Gephi's Data laboratory, showing the edge list (so, after pressing "Edges" on the top left)_
 
 
 The Data laboratory can be used to manually change the data behind the graph, i.e., adding, removing and modifying the nodes, edges and their attributes. 
-Adding nodes and edges can be done by using the respective buttons on top of the data table, and modifying one particular node or edge can be done by right clicking and selecting edit-option.
-Changes the the columns or column-wise modifications for all or multiple rows, can be effectuated using the buttons at the bottom of the data table.
+Adding nodes and edges can be done by using the respective buttons on top of the data table, and modifying one particular node or edge can be done by right-clicking and selecting the edit option.
+Changes to the columns or column-wise modifications for all or multiple rows can be effectuated using the buttons at the bottom of the data table.
 
-**Task 3.1**: Create a new graph in which you represent your direct/close family members as nodes, and the blood connections between them as edges. Add a node attribute "Label" for their name, as well one for their "Age". You can also add an edge attribute of choice (for example, a binary attribute indicating whether the two family members physically live together). When your data is complete, visualize the graph in the "Overview" tab; be sure to enable labels and choose meaningful colors for the nodes and edges based on either network properties or attributes. 
+**Task 3.1**: Create a new graph in which you represent your direct/close family members as nodes, and the blood connections between them as edges. Add a node attribute "Label" for their name, as well as one for their "Age". You can also add an edge attribute of choice (for example, a binary attribute indicating whether the two family members physically live together). When your data is complete, visualize the graph in the "Overview" tab; be sure to enable labels and choose meaningful colors for the nodes and edges based on either network properties or attributes. 
 
 ### 3.2 Importing data 
 
-The node and edge lists of Gephi can also be filled by importing data from CSV files, or even (Excel) spreadsheets. For this, use the "Import spreadsheet" button, which invokes an import window. 
+The node and edge lists of Gephi can also be filled by importing data from CSV files or even (Excel) spreadsheets. For this, use the "Import spreadsheet" button, which invokes an import window. 
 (Note that the same type of import window can be invoked when using the "File", "Open" menu button, and selecting a non-Gephi file that does have properties of a data file, i.e., is column-based.)
 
-Along the way, you are asked to select the right data format. Here, "Edges table" and "Nodes table" are the edge list and node list formats most commonly used, with `Id` being the identifier column in the node list, and two columns `Source` and `Target` in the edge list. 
-The final screen asks whether the graph should be directed or undirected, and whether the data should be appended to the current workspace, or whether a new workspace should be made. The append-option can be used to merge multiple datasets based on the unique identifier `Id` of the nodes.
+Along the way, you are asked to select the right data format. Here, "Edges table" and "Nodes table" are the edge list and node list formats most commonly used, with `Id` being the identifier column in the node list, and two columns, `Source` and `Target`, in the edge list. 
+The final screen asks whether the graph should be directed or undirected, and whether the data should be appended to the current workspace or whether a new workspace should be made. The append option can be used to merge multiple datasets based on the unique identifier `Id` of the nodes.
 
 **Task 3.2**: Download the [small-gephiready.tsv](https://github.com/franktakes/gephi-tutorial/blob/main/small-gephiready.tsv?raw=true) edge list file, and load it into Gephi via the Data laboratory. This .tsv file has tab-separated columns. Go back to the Overview screen and create a visually appealing visualization. 
 The rest of the tutorial will also use this dataset. 
 
 ### 3.3 Exporting data 
 
-Similar to importing, both the node and edge lists can also be exported for reuse in another tool using the "Export table" button. You can then reuse or amend this data, for example in Excel, or in a python pandas dataframe. 
+Similar to importing, both the node and edge lists can also be exported for reuse in another tool using the "Export table" button. You can then reuse or amend this data, for example, in Excel or in a Python pandas dataframe. 
 
 ## Part 4: A second real-world network visualization
 
@@ -180,8 +180,8 @@ _Figure: Visualization of the [small-gephiready.tsv](https://github.com/franktak
 ## 4.1 Statistics
 
 Through the Statistics window, various properties of the network can be computed. After computation, so after pressing the button corresponding to the statistic, an overview window is produced showing some results. 
-Typically the value or distribution of that statistic is shown (albeit in a suboptimal visual, missing for example logarithmic axes). But more importantly, in the node list, a column is added containing the value of that particular metric. Many of these metrics are known as **centrality measures**, that determine the importance of a node based on the structural position of that node in the network. 
-This centrality value can in turn be used to adjust for example the color or size of a node (see [Part 2: A first visualization of a network](#part-2-a-first-visualization-of-a-network)). 
+Typically, the value or distribution of that statistic is shown (albeit in a suboptimal visual, missing, for example, logarithmic axes). But more importantly, in the node list, a column is added containing the value of that particular metric. Many of these metrics are known as **centrality measures**, which determine the importance of a node based on the structural position of that node in the network. 
+This centrality value can, in turn, be used to adjust, for example, the color or size of a node (see [Part 2: A first visualization of a network](#part-2-a-first-visualization-of-a-network)). 
 
 * Average Degree: computes the average degree of nodes, and adds the `Degree` column to the node list (and Indegree and Outdegree in case of directed graphs).
 * Avg. Weighted Degree: same as above, but then specific to weighted networks.
@@ -197,7 +197,7 @@ This centrality value can in turn be used to adjust for example the color or siz
 
 Apart from computing measures that say something about the nodes or the graph as a whole, we may also be interested in groups, i.e., clusters in the network, which in a network analysis context are called **communities**. Various algorithms for detecting these communities exist, and under the "Community detection" header, two of these algorithms can be found. 
 
-* Community detection (multiple algorithms): compute an integer value for each node that becomes a node attribute. For example, "Modularity", indicating to which community a node belongs based on an optimization process maximizing the number of intra-community links and minimizing the number of links between communities. A resolution parameter can be used to increase or decrease the number of communities found.
+* Community detection (multiple algorithms): compute an integer value for each node that becomes a node attribute. For example, "Modularity", indicating to which community a node belongs based on an optimization process that maximizes the number of intra-community links and minimizes the number of links between communities. A resolution parameter can be used to increase or decrease the number of communities found.
 
 **Task 4.2**: Run Modularity and color (partition) the nodes based on their community (the `Modularity Class` attribute). The result should roughly look like the figure below. 
 
@@ -206,12 +206,12 @@ _Figure: Visualization of the [small-gephiready.tsv](https://github.com/franktak
 
 ## 4.3 Filters
 
-The tab next to Statistics opens up a set of filters. These filters can be used to only display certain parts of the graph. You can select a filter and drag it to the "Queries" list below, to activate it. Some noteworthy filters include:
+The tab next to Statistics opens up a set of filters. These filters can be used to only display certain parts of the graph. You can select a filter and drag it to the "Queries" list below to activate it. Some noteworthy filters include:
 
-* Topology, Giant component: only show the largest connected component (does nothing in case the network consists of just one connected component, such as in our practice file).
-* Attributes, Partition: only show nodes of which an attribute has a certain  value.
-* Attributes, Range: only show nodes of which an attribute is a certain range of values; for example setting a cut-off value for the degree, or based on centrality. 
-* Edges, Edge Weight: an often useful filter to, for a weighted network, only show the strongest links (handy when the graph is too dense to meaningfully visualize). 
+* Topology > Giant component: only shows the largest connected component (does nothing in case the network consists of just one connected component, such as in our practice file).
+* Attributes > Partition: only show nodes for which an attribute has a certain value.
+* Attributes > Range: only show nodes for which an attribute is a certain range of values; for example, setting a cut-off value for the degree, or based on centrality. 
+* Edges > Edge Weight: an often useful filter to, for a weighted network, only show the strongest links (handy when the graph is too dense to meaningfully visualize). 
 
 Note that filters can also be combined (which is not always intuitive). 
 
@@ -219,13 +219,13 @@ Note that filters can also be combined (which is not always intuitive).
 
 ## Part 5: Exporting a network visualization
 
-You now have all the skills to visualize a network in a meaningful way, and now it is time to export a picture-perfect version of it for reuse; for example in a presentation, report or a paper. 
+You now have all the skills to visualize a network in a meaningful way, and now it is time to export a picture-perfect version of it for reuse; for example, in a presentation, report or paper. 
 
 In the third Gephi tab, being Preview, it is possible to change final visual properties before exporting the visualization as crafted in the Overview tab. 
 The "Refresh" button in the bottom right should be pressed to update the visualization. The visual you get may not look identical to what you see in the Overview tab.
-In particular, the option "Curved" of the edgges needs to be disabled.
+In particular, the option "Curved" for the edges needs to be disabled.
 
-After adjusting the desired properties of the Nodes, Node Labels, Edges and Edge Labels on the left, the button "Export: SVG/PDF/PNG" leads to a screen where the destination of the output file can be chosen. Be sure to choose a vector graphic format such as SVG, or, usually easiest, PDF. In this final window, the "Options" button on the bottom right.
+After adjusting the desired properties of the Nodes, Node Labels, Edges and Edge Labels on the left, the button "Export: SVG/PDF/PNG" leads to a screen where the destination of the output file can be chosen. Be sure to choose a vector graphic format such as SVG, or, usually easiest, PDF. In this final window, the "Options" button is on the bottom right.
 
 ![Gephi-preview](https://github.com/franktakes/gephi-tutorial/blob/main/img/gephi-preview.png?raw=true)
 _Figure: Gephi's Preview tab for exporting the visualization for reuse_
@@ -242,9 +242,9 @@ Many more things are possible with Gephi, often implemented through [Gephi Plugi
 
 - Dynamic networks that change/evolve over time; see [Gephi's documentation on dynamic networks](https://docs.gephi.org/User_Manual/Import_Dynamic_Data/)
 
-- [GeoLayout](https://gephi.org/plugins/#/plugin/geolayout-plugin) to visualize nodes at particular coordinates on the world map often used together with [MapsOfCountries](https://gephi.org/plugins/#/plugin/mapofcountries) to show the outline of the world, a country or region. 
+- [GeoLayout](https://gephi.org/plugins/#/plugin/geolayout-plugin) to visualize nodes at particular coordinates on the world map, often used together with [MapsOfCountries](https://gephi.org/plugins/#/plugin/mapofcountries) to show the outline of the world, a country or region. 
 
-- [MultimodeNetworksTransformationPlugin](https://gephi.org/plugins/#/plugin/multimode): a plugin for network projection, i.e., for modifying a network with multiple types of nodes (as defined by particular categorical node attributes), i.e., multipartitie networks, to unipartitate networks that can be meaningfully analyzed using Gephi. 
+- [MultimodeNetworksTransformationPlugin](https://gephi.org/plugins/#/plugin/multimode): a plugin for network projection, i.e., for modifying a network with multiple types of nodes (as defined by particular categorical node attributes), i.e., multipartite networks, to unipartite networks that can be meaningfully analyzed using Gephi. 
 
 - The [BoundingDiameters](https://gephi.org/plugins/#/plugin/boundingdiametersssuite) algorithm for quickly computing the exact diameter (longest shortest path length) of a network. 
 
@@ -252,5 +252,5 @@ Many more things are possible with Gephi, often implemented through [Gephi Plugi
 
 Thank you for walking through this tutorial! I hope you enjoyed it.
 
-See details on top on how to [reference](#referencing) this tutorial. 
+See details at the top on how to [reference](#referencing) this tutorial. 
 Feedback and suggestions are welcome (via Github "Issues"); also (and especially!) from students.
